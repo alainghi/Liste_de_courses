@@ -1,6 +1,8 @@
 # Liste de courses
 
-Application Android de gestion de liste de courses : ajouter des produits, organiser par catégories, cocher au fur et à mesure.
+> On part pour acheter des fraises et on revient avec un chariot plein… mais sans fraises.
+
+Application Android de gestion de liste de courses : ajouter des produits, organiser par catégories, cocher au fur et à mesure — pour ne plus jamais revenir les mains vides.
 
 ## Fonctionnalités
 
