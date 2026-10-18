@@ -1,0 +1,10 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "gradle.nestedProjects": true,
+    "files.watcherExclude": {
+        "**/build/**": true,
+        "**/gradle/**": true,
+        "**/.gradle/**": true
+    },
+    "java.compile.nullAnalysis.mode": "automatic"
+}

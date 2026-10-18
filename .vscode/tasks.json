@@ -1,0 +1,113 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Android Emulator (Git Bash)",
+            "type": "shell",
+            "command": "cd \"$LOCALAPPDATA/Android/Sdk/emulator\" && ./emulator -avd Pixel_8 -read-only",
+            "options": {
+                "shell": {
+                    "executable": "C:\\Program Files\\Git\\bin\\bash.exe",
+                    "args": ["-c"]
+                }
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "group": "none",
+            "windows": {
+                "command": "cd \"$LOCALAPPDATA/Android/Sdk/emulator\" && ./emulator -avd Pixel_8 -read-only"
+            }
+        },
+        {
+            "label": "Start Android Emulator (Windows CMD)",
+            "type": "shell",
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": ["/c"]
+                }
+            },
+            "command": "cd %LOCALAPPDATA%\\Android\\Sdk\\emulator && emulator -avd Pixel_8 -read-only",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "group": "none"
+        },
+        {
+            "label": "Start Android Emulator (macOS)",
+            "type": "shell",
+            "command": "cd ~/Library/Android/Sdk/emulator && ./emulator -avd Pixel_8 -read-only",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "group": "none"
+        },
+        {
+            "label": "Stop Android Emulator",
+            "type": "shell",
+            "command": "./kill_emulator.sh",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "group": "none"
+        },
+        {
+            "label": "Build and Install Android App",
+            "type": "shell",
+            "command": "./gradlew installDebug",
+            "windows": {
+                "command": ".\\gradlew installDebug"
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": "$gradle"
+        },
+        {
+            "label": "Run Android App (Git Bash)",
+            "type": "shell",
+            "command": "\"$LOCALAPPDATA/Android/Sdk/platform-tools/adb\" shell am start -n \"fr.aghi.listedecourses/fr.aghi.listedecourses.MainActivity\" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER",
+            "options": {
+                "shell": {
+                    "executable": "C:\\Program Files\\Git\\bin\\bash.exe",
+                    "args": ["-c"]
+                }
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": [],
+            "group": "none"
+        },
+        {
+            "label": "Run Android App (Windows CMD)",
+            "type": "shell",
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": ["/c"]
+                }
+            },
+            "command": "\"%LOCALAPPDATA%\\Android\\Sdk\\platform-tools\\adb\" shell am start -n \"fr.aghi.listedecourses/fr.aghi.listedecourses.MainActivity\" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": [],
+            "group": "none"
+        }
+    ]
+} 
